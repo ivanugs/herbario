@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlantaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class);
+
+Route::get('plantas', [PlantaController::class, 'index']);
+Route::get('plantas/create', [PlantaController::class, 'create']);
+Route::get('plantas/{planta}', [PlantaController::class, 'show']);
+
