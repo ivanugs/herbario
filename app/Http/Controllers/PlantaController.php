@@ -8,16 +8,17 @@ class PlantaController extends Controller
 {
     public function index()
     {
-        return "Bienvenido a la pagina plantas.";
+        return view('plantas.index');
     } 
 
     public function create()
     {
-        return "Bienvenido a la pagina create.";
+        return view('plantas.create');
     } 
 
     public function show($planta)
     {
-        return "Bienvenido a la pagina: $planta";
+        
+        return view('plantas.show', compact('planta'));
     } 
 }

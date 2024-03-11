@@ -18,7 +18,11 @@ use App\Http\Controllers\PlantaController;
 
 Route::get('/', HomeController::class);
 
-Route::get('plantas', [PlantaController::class, 'index']);
-Route::get('plantas/create', [PlantaController::class, 'create']);
-Route::get('plantas/{planta}', [PlantaController::class, 'show']);
+Route::controller(PlantaController::class)->group(function(){
+    Route::get('plantas', 'index');
+    Route::get('plantas/create', 'create');
+    Route::get('plantas/{planta}', 'show');
+});
+
+
 
