@@ -16,11 +16,13 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     </head>
-
     <body>
         <header>
-            <!-- place navbar here -->
+            <x-navbar />
         </header>
         <main>
             @yield('content')

@@ -1,0 +1,30 @@
+.carousel-item-custom {
+   height: 78vh;
+   min-height: 300px;
+   background: no-repeat center center scroll;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin-left: 10%; /* Ajusta el margen izquierdo */
+   margin-right: 10%; /* Ajusta el margen derecho */
+}
+
+@media (max-width: 576px) {
+   .carousel-item-custom {
+      height: 300px; /* Ajusta la altura para dispositivos pequeños */
+   }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+   .carousel-item-custom {
+      height: 400px; /* Ajusta la altura para dispositivos medianos */
+   }
+}
+
+@media (min-width: 769px) {
+   .carousel-item-custom {
+      height: 78vh; /* Mantiene la altura para dispositivos grandes */
+   }
+}
+
